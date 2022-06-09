@@ -1,13 +1,10 @@
 package vttp2022.day3.workshop;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        //print out first argument db name use to create the directory
+        System.out.println( args[0]);
     }
 }
