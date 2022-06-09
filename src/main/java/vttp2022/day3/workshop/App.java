@@ -2,9 +2,20 @@ package vttp2022.day3.workshop;
 
 public class App 
 {
+    public static String defaultDb= "db";
     public static void main( String[] args )
     {
         //print out first argument db name use to create the directory
-        System.out.println( args[0]);
+         if(args.length > 0)
+            if(args[0] != null){
+                System.out.println( args[0]);
+                App.defaultDb = args[0];
+            }
+        System.out.println(defaultDb);
+        Repository repo = new Repository(defaultDb);
+        Session session = new Session(repo);
+        session.start();
+        
+            
     }
 }
